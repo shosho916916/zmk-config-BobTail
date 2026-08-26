@@ -133,7 +133,7 @@
         new_macroniduke: new_macroniduke {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp LS(SLASH)>;
+            bindings = <&kp LANGUAGE_2 &kp SLASH>;
             label = "NEW_MACRONIDUKE";
         };
     };
