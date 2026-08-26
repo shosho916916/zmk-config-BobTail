@@ -39,6 +39,71 @@
         };
     };
 
+    macros {
+        new_macro1: new_macro1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_1>;
+            label = "NEW_MACRO1";
+        };
+
+        new_macro2: new_macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_2>;
+            label = "NEW_MACRO2";
+        };
+
+        new_macro3: new_macro3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_3>;
+            label = "NEW_MACRO3";
+        };
+
+        new_macro4: new_macro4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_4>;
+            label = "NEW_MACRO4";
+        };
+
+        new_macro5: new_macro5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp N5>;
+            label = "NEW_MACRO5";
+        };
+
+        new_macro6: new_macro6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_6>;
+            label = "NEW_MACRO6";
+        };
+
+        new_macro7: new_macro7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp N7>;
+            label = "NEW_MACRO7";
+        };
+
+        new_macro8: new_macro8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp N8>;
+            label = "NEW_MACRO8";
+        };
+
+        new_macro9: new_macro9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp N9>;
+            label = "NEW_MACRO9";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,10 +129,10 @@
 
         NUM {
             bindings = <
-&kp LS(EXCL)  &kp AT        &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                              &kp CARET    &kp AMPERSAND  &kp LS(UNDER)  &kp TILDE     &kp MINUS
-&kp SQT       &kp LS(LBRC)  &kp LBKT       &kp LS(LPAR)  &kp LS(DQT)    &kp LS(LT)      &kp LS(GT)  &kp LS(DQT)  &kp LS(RPAR)   &kp RBKT       &kp LS(RBRC)  &kp SQT
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4   &trans          &trans      &trans       &trans         &trans         &kp PIPE      &kp BACKSLASH
-&bt BT_CLR    &trans        &trans         &trans        &trans         &trans          &trans      &trans                                                   &trans
+&kp LS(EXCL)  &kp AT        &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                              &kp CARET    &new_macro1  &new_macro2  &new_macro3  &kp MINUS
+&kp SQT       &kp LS(LBRC)  &kp LBKT       &kp LS(LPAR)  &kp LS(DQT)    &kp LS(LT)      &kp LS(GT)  &kp LS(DQT)  &new_macro4  &new_macro5  &new_macro6  &kp SQT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4   &trans          &trans      &trans       &new_macro7  &new_macro8  &new_macro9  &kp BACKSLASH
+&bt BT_CLR    &trans        &trans         &trans        &trans         &trans          &trans      &trans                                              &trans
             >;
         };
 
