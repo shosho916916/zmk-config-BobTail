@@ -170,10 +170,10 @@
 
         NUM {
             bindings = <
-&none       &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT                                      &new_macrojikan   &new_macro1  &new_macro2  &new_macro3  &kp PLUS
-&none       &kp UNDER  &kp PLUS       &kp MINUS         &kp DOUBLE_QUOTES  &none          &kp LEFT_GUI   &new_macroniduke  &new_macro4  &new_macro5  &new_macro6  &new_macro0
-&none       &none      &none          &none             &kp RS(INT1)       &trans         &kp DOT        &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
-&kp ESCAPE  &none      &trans         &kp LEFT_SHIFT    &none              &kp SPACE      &kp BACKSPACE  &kp ENTER                                                &kp DEL
+&none       &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT                                         &new_macrojikan   &new_macro1  &new_macro2  &new_macro3  &kp PLUS
+&none       &kp UNDER  &kp PLUS       &kp MINUS         &kp DOUBLE_QUOTES  &none             &kp LEFT_GUI   &new_macroniduke  &new_macro4  &new_macro5  &new_macro6  &new_macro0
+&none       &none      &none          &none             &kp RS(INT1)       &kp LEFT_GUI      &kp DOT        &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
+&kp ESCAPE  &none      &trans         &kp LEFT_SHIFT    &none              &none             &kp BACKSPACE  &kp ENTER                                                &kp DEL
             >;
         };
 
@@ -190,7 +190,7 @@
 
         MOUSE {
             bindings = <
-&none      &none      &none      &none           &none                                 &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mo 5   &mo 5
+&none      &none      &kp LC(E)  &kp LC(T)       &none                                 &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mo 5   &mo 5
 &kp LC(A)  &kp LC(X)  &kp LC(V)  &kp LC(C)       &none             &trans      &trans  &trans  &mkp MB1            &mkp MB2             &trans  &trans
 &none      &none      &none      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans      &trans  &trans  &trans              &trans               &trans  &trans
 &none      &none      &none      &none           &to 0             &trans      &trans  &trans                                                   &trans
