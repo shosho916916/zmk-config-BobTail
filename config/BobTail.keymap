@@ -42,14 +42,14 @@
         new_macro1: new_macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp NUMBER_1>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_1 &kp LANGUAGE_1>;
             label = "NEW_MACRO1";
         };
 
         new_macro2: new_macro2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp NUMBER_2>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_2 &kp LANGUAGE_1>;
             label = "NEW_MACRO2";
         };
 
@@ -143,9 +143,9 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp L    &kp U        &kp COMMA       &kp DOT                                            &kp F        &kp W  &kp R    &kp Y  &kp P
-&kp E    &kp I    &kp A        &kp O           &kp MINUS          &none            &kp RIGHT_GUI  &kp K        &kp T  &lt 5 N  &kp S  &kp H
-&kp Z    &kp X    &kp C        &kp V           &kp RIGHT_CONTROL  &kp LALT         &kp ESC        &kp G        &kp D  &kp M    &kp J  &kp B
+&kp Q    &kp L    &kp U        &kp COMMA       &kp DOT                                            &kp F        &kp W  &kp R  &lt 5 Y  &kp P
+&kp E    &kp I    &kp A        &kp O           &kp MINUS          &none            &kp RIGHT_GUI  &kp K        &kp T  &kp N  &kp S    &kp H
+&kp Z    &kp X    &kp C        &kp V           &kp RIGHT_CONTROL  &kp LALT         &kp LA(TAB)    &kp G        &kp D  &kp M  &kp J    &kp B
 &kp ESC  &kp TAB  &kp RA(TAB)  &kp LEFT_SHIFT  &kp LANGUAGE_1     &lt 2 SPACE      &kp BACKSPACE  &lt 1 ENTER                         &kp DELETE
             >;
 
@@ -154,19 +154,19 @@
 
         FUNCTION {
             bindings = <
-&kp HASH    &kp AT         &kp RBKT               &kp BACKSLASH        &kp AMPERSAND                                &kp F2  &kp HOME  &kp UP_ARROW  &kp END          &none
-&kp DOLLAR  &kp AMPERSAND  &new_macrohidarikakko  &new_macromigikakko  &none          &none          &none          &kp F7  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none
-&none       &kp LBKT       &kp RIGHT_BRACE        &kp LS(BACKSLASH)    &none          &trans         &none          &kp F8  &kp EXCL  &kp QUESTION  &none            &none
-&kp ESCAPE  &trans         &trans                 &trans               &trans         &kp SPACE      &kp BACKSPACE  &none                                            &kp DELETE
+&kp HASH    &kp AT         &kp RBKT               &kp BACKSLASH        &kp AMPERSAND                                  &kp F2  &kp HOME  &kp UP_ARROW  &kp END          &none
+&kp DOLLAR  &kp AMPERSAND  &new_macrohidarikakko  &new_macromigikakko  &none          &none          &kp PRINTSCREEN  &kp F7  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none
+&none       &kp LBKT       &kp RIGHT_BRACE        &kp LS(BACKSLASH)    &none          &trans         &none            &kp F8  &kp EXCL  &kp QUESTION  &none            &none
+&kp ESCAPE  &trans         &trans                 &trans               &trans         &kp SPACE      &kp BACKSPACE    &none                                            &kp DELETE
             >;
         };
 
         NUM {
             bindings = <
-&none       &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT                                            &new_macrojikan   &new_macro1  &new_macro2  &new_macro3  &kp PLUS
-&none       &kp UNDER  &kp PLUS       &kp MINUS         &kp DOUBLE_QUOTES  &none          &kp LS(PRINTSCREEN)  &new_macroniduke  &new_macro4  &new_macro5  &new_macro6  &new_macro0
-&none       &none      &none          &none             &kp RS(INT1)       &trans         &none                &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
-&kp ESCAPE  &none      &trans         &kp LEFT_SHIFT    &none              &kp SPACE      &kp BACKSPACE        &kp ENTER                                                &kp DEL
+&none       &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT                                      &new_macrojikan   &new_macro1  &new_macro2  &new_macro3  &kp PLUS
+&none       &kp UNDER  &kp PLUS       &kp MINUS         &kp DOUBLE_QUOTES  &none          &kp LEFT_GUI   &new_macroniduke  &new_macro4  &new_macro5  &new_macro6  &new_macro0
+&none       &none      &none          &none             &kp RS(INT1)       &trans         &none          &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
+&kp ESCAPE  &none      &trans         &kp LEFT_SHIFT    &none              &kp SPACE      &kp BACKSPACE  &kp ENTER                                                &kp DEL
             >;
         };
 
@@ -183,10 +183,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans          &trans                                &trans  &trans    &trans    &mo 5   &trans
-&trans  &trans  &trans  &trans          &trans            &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
-&trans  &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans      &trans  &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans          &to 0             &trans      &trans  &trans                              &trans
+&none      &none      &none      &none           &none                                 &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mo 5   &trans
+&kp LC(A)  &kp LC(X)  &kp LC(V)  &kp LC(C)       &none             &trans      &trans  &trans  &mkp MB1            &mkp MB2             &trans  &trans
+&none      &none      &none      &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans      &trans  &trans  &trans              &trans               &trans  &trans
+&none      &none      &none      &none           &to 0             &trans      &trans  &trans                                                   &trans
             >;
         };
 
