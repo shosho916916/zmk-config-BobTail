@@ -56,42 +56,42 @@
         new_macro3: new_macro3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp NUMBER_3>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_3 &kp LANGUAGE_1>;
             label = "NEW_MACRO3";
         };
 
         new_macro4: new_macro4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp NUMBER_4>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_4 &kp LANG1>;
             label = "NEW_MACRO4";
         };
 
         new_macro5: new_macro5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp N5>;
+            bindings = <&kp LANGUAGE_2 &kp N5 &kp LANGUAGE_1>;
             label = "NEW_MACRO5";
         };
 
         new_macro6: new_macro6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp NUMBER_6>;
+            bindings = <&kp LANGUAGE_2 &kp NUMBER_6 &kp LANGUAGE_1>;
             label = "NEW_MACRO6";
         };
 
         new_macro7: new_macro7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp N7>;
+            bindings = <&kp LANGUAGE_2 &kp N7 &kp LANGUAGE_1>;
             label = "NEW_MACRO7";
         };
 
         new_macro8: new_macro8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp N8>;
+            bindings = <&kp LANGUAGE_2 &kp N8 &kp LANGUAGE_1>;
             label = "NEW_MACRO8";
         };
 
@@ -105,7 +105,7 @@
         new_macro0: new_macro0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp N0>;
+            bindings = <&kp LANGUAGE_2 &kp N0 &kp LANGUAGE_1>;
             label = "NEW_MACRO0";
         };
 
@@ -119,14 +119,14 @@
         new_macrohidarikakko: new_macrohidarikakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp LS(N8)>;
+            bindings = <&kp LANGUAGE_2 &kp LS(N8) &kp LANGUAGE_1>;
             label = "NEW_MACROHIDARIKAKKO";
         };
 
         new_macromigikakko: new_macromigikakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp LS(N9)>;
+            bindings = <&kp LANGUAGE_2 &kp LS(N9) &kp LANGUAGE_1>;
             label = "NEW_MACROMIGIKAKKO";
         };
 
@@ -136,6 +136,13 @@
             bindings = <&kp LANGUAGE_2 &kp SLASH>;
             label = "NEW_MACRONIDUKE";
         };
+
+        new_macrotab: new_macrotab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp TAB>;
+            label = "NEW_MACROTAB";
+        };
     };
 
     keymap {
@@ -143,10 +150,10 @@
 
         default_layer {
             bindings = <
-&kp Q    &kp L    &kp U        &kp COMMA       &kp DOT                                            &kp F        &kp W  &kp R  &lt 5 Y  &lt 5 P
-&kp E    &kp I    &kp A        &kp O           &kp MINUS          &none            &kp RIGHT_GUI  &kp K        &kp T  &kp N  &kp S    &kp H
-&kp Z    &kp X    &kp C        &kp V           &kp RIGHT_CONTROL  &kp LALT         &kp LA(TAB)    &kp G        &kp D  &kp M  &kp J    &kp B
-&kp ESC  &kp TAB  &kp RA(TAB)  &kp LEFT_SHIFT  &kp LANGUAGE_1     &lt 2 SPACE      &kp BACKSPACE  &lt 1 ENTER                         &kp DELETE
+&kp Q    &kp L    &kp U        &kp COMMA       &kp DOT                                              &kp F        &kp W  &kp R  &lt 5 Y  &lt 5 P
+&kp E    &kp I    &kp A        &kp O           &kp MINUS          &none            &kp RIGHT_GUI    &kp K        &kp T  &kp N  &kp S    &kp H
+&kp Z    &kp X    &kp C        &kp V           &kp RIGHT_CONTROL  &kp LALT         &kp LA(LC(TAB))  &kp G        &kp D  &kp M  &kp J    &kp B
+&kp ESC  &kp TAB  &kp RA(TAB)  &kp LEFT_SHIFT  &kp LANGUAGE_1     &lt 2 SPACE      &kp BACKSPACE    &lt 1 ENTER                         &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -165,7 +172,7 @@
             bindings = <
 &none       &none      &kp LESS_THAN  &kp GREATER_THAN  &kp PERCENT                                      &new_macrojikan   &new_macro1  &new_macro2  &new_macro3  &kp PLUS
 &none       &kp UNDER  &kp PLUS       &kp MINUS         &kp DOUBLE_QUOTES  &none          &kp LEFT_GUI   &new_macroniduke  &new_macro4  &new_macro5  &new_macro6  &new_macro0
-&none       &none      &none          &none             &kp RS(INT1)       &trans         &none          &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
+&none       &none      &none          &none             &kp RS(INT1)       &trans         &kp DOT        &kp COMMA         &new_macro7  &new_macro8  &new_macro9  &kp MINUS
 &kp ESCAPE  &none      &trans         &kp LEFT_SHIFT    &none              &kp SPACE      &kp BACKSPACE  &kp ENTER                                                &kp DEL
             >;
         };
