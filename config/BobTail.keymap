@@ -19,11 +19,13 @@
         shift_tab {
             bindings = <&kp LANG2>;
             key-positions = <12 13>;
+            layers = <0 2 3 1>;
         };
 
         lang {
             bindings = <&kp LANG1>;
             key-positions = <18 19>;
+            layers = <0 2 3 1>;
         };
 
         modoru {
