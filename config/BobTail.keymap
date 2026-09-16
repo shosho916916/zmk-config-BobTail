@@ -25,6 +25,18 @@
             bindings = <&kp LANG1>;
             key-positions = <18 19>;
         };
+
+        modoru {
+            bindings = <&to 0>;
+            key-positions = <18 19>;
+            layers = <4>;
+        };
+
+        modoru2 {
+            bindings = <&to 0>;
+            key-positions = <12 13>;
+            layers = <4>;
+        };
     };
 
     behaviors {
