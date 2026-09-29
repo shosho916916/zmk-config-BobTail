@@ -209,9 +209,9 @@
 
         MOUSE {
             bindings = <
-&none       &kp LC(W)        &kp LC(E)    &kp LC(T)       &none                                          &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mo 5   &mo 5
-&kp LC(A)   &kp LC(X)        &kp LC(V)    &kp LC(C)       &none             &trans      &kp PRINTSCREEN  &trans  &mkp MB1            &mkp MB2             &trans  &kp BACKSPACE
-&none       &kp LC(LS(TAB))  &kp LC(TAB)  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans      &trans           &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans  &trans
+&none       &kp LC(W)        &kp LC(E)    &kp LC(T)       &none                                          &kp F2  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mo 5   &mo 5
+&kp LC(A)   &kp LC(X)        &kp LC(V)    &kp LC(C)       &none             &trans      &kp PRINTSCREEN  &kp F7  &mkp MB1            &mkp MB2             &trans  &kp BACKSPACE
+&none       &kp LC(LS(TAB))  &kp LC(TAB)  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans      &trans           &kp F8  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans  &trans
 &kp ESCAPE  &none            &none        &kp LEFT_SHIFT  &kp SPACE         &to 0       &trans           &trans                                                   &trans
             >;
         };
